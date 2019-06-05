@@ -28,14 +28,19 @@ namespace LoginSystem
             //Calls to the validateUsername Method
             Console.WriteLine("");
             validateUsername(username);
-
+           
             //Prompts the user to enter their password
             Console.WriteLine("Please Enter Your Password");
             string password1 = Console.ReadLine();
 
-            //Calls to the validatePassword method
-            Console.WriteLine("");
-            validatePassword(password1);
+             //Prompts the user to enter their password
+             Console.WriteLine("Please Enter Your Password Again");
+             string password2 = Console.ReadLine();
+
+             //Calls to the method
+             Console.WriteLine("");
+             validatePassword(password1, password2);
+            
 
             //Displays username and password
             Console.WriteLine("Username and Password Have Been Accepted");
@@ -67,26 +72,18 @@ namespace LoginSystem
                 Console.WriteLine("");
             } 
         }
-        public static void validatePassword(string password1)
+        public static void validatePassword(string password1, string password2)
         {
-            //Infinitely loops until user enters in the correct password length
-            while (true)
-            {
-
+                                                         
                 //Statement to confirm the correct length of the users password and asks for another password entering prompt
                 if (password1.Length > 7)
-                {
-                    Console.WriteLine("Please Enter Your Password Again");
-                    string password2 = Console.ReadLine();
-
-                    Console.WriteLine("");
-                    
+                {                                      
                     //statement to confirm that the password they entered was the same
                     if (password2 == password1)
                     {
                         Console.WriteLine("You Have Been Logged In");
                         Console.ReadLine();
-                        break;
+                        
                     }
 
                     //Statement to tell the user that the password they entered wasn't the same
@@ -101,12 +98,8 @@ namespace LoginSystem
                 {
                     Console.WriteLine("Password was not long enough, Try Again");
                     Console.ReadLine();
-                }
-
-                Console.WriteLine("Please Enter Your Password");
-                password1 = Console.ReadLine();
-                Console.WriteLine("");
-            }
+                }  
+                
         }
     }
 }
