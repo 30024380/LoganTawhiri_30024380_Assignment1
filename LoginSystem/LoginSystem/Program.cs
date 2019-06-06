@@ -32,18 +32,18 @@ namespace LoginSystem
                 //Prompts the user to enter their username
                 Console.WriteLine("\nPlease Enter Your Username");
                 //calls to the validateUsername method
-                userName = validateUsername(username = Console.ReadLine());
+                userName = validateUsername(username = Console.ReadLine().Trim());
                 if (userName == false)
                 {
                     while (passWord)
                     {
                         //Prompts the user to enter their password
                         Console.WriteLine("\nPlease Enter Your Password");
-                        string password1 = Console.ReadLine();
+                        string password1 = Console.ReadLine().Trim();
 
                         Console.WriteLine("\nPlease Enter Your Password Again");
                         //Calls to the validatePassword method
-                        passWord = validatePassword(password1, Console.ReadLine());
+                        passWord = validatePassword(password1, Console.ReadLine().Trim());
                     }
                 }
                 else

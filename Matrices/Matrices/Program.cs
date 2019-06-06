@@ -48,7 +48,7 @@ namespace Matrices
             Console.WriteLine("Array B: ");
             Display(matrixB);
 
-            //Both arrays added together
+            //Displays both arrays added together and adds them together
             Console.WriteLine("Arrays Added Together: ");
             for(int i = 0; i < 3; i++)
             {

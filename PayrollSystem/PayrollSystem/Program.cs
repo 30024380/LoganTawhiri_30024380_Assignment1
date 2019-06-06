@@ -32,7 +32,7 @@ namespace PayrollSystem
             e1.Lname = Console.ReadLine();
 
             //Asking the user their Tax Rate
-            Console.Write("Please Enter Your Tax Rate: ");
+            Console.Write("Please Enter Your Tax Rate (15): ");
             e1.Tax = double.Parse(Console.ReadLine());
 
             //Asking the user for Annual Gross Salary
