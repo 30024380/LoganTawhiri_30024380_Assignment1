@@ -31,8 +31,8 @@ namespace LoginSystem
 
                 //Prompts the user to enter their username
                 Console.WriteLine("\nPlease Enter Your Username");
-                //calls to the validateUsername method
-                userName = validateUsername(username = Console.ReadLine().Trim());
+                //calls to the validateUsername method                              //https://docs.microsoft.com/en-us/dotnet/api/system.string.trim?view=netframework-4.8
+                userName = validateUsername(username = Console.ReadLine().Trim()); //Had to insert the .Trim to prevent the user from entering all 'spaces' within the username and password (testing error 1) 
                 if (userName == false)
                 {
                     while (passWord)
@@ -43,7 +43,7 @@ namespace LoginSystem
 
                         Console.WriteLine("\nPlease Enter Your Password Again");
                         //Calls to the validatePassword method
-                        passWord = validatePassword(password1, Console.ReadLine().Trim());
+                        passWord = validatePassword(password1, Console.ReadLine().Trim()); 
                     }
                 }
                 else
